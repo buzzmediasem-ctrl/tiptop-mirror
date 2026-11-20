@@ -31,9 +31,8 @@ function ShowroomPage() {
           />
           <div>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Experience our full range in person. Explore the latest trends,
-              touch premium fabrics, and get expert advice in our designer
-              showroom in Clayton.
+              Experience our full range in person. Explore the latest trends, touch premium fabrics,
+              and get expert advice in our designer showroom in Clayton.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex gap-2">

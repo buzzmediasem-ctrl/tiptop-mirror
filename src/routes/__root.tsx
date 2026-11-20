@@ -19,9 +19,7 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="font-serif text-7xl font-medium text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">
-          Page not found
-        </h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
         </p>
@@ -285,52 +283,134 @@ function Footer() {
               className="h-16 w-auto object-contain brightness-0 invert mb-4"
             />
             <p className="text-sm leading-relaxed">
-              Premium window furnishings for exceptional Australian homes.
-              Crafted with care, installed with precision.
+              Premium window furnishings for exceptional Australian homes. Crafted with care,
+              installed with precision.
             </p>
             <div className="flex gap-4 mt-4">
-              <a href={site.social.facebook} aria-label="Facebook" className="text-white/60 hover:text-accent transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+              <a
+                href={site.social.facebook}
+                aria-label="Facebook"
+                className="text-white/60 hover:text-accent transition-colors"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z" />
+                </svg>
               </a>
-              <a href={site.social.instagram} aria-label="Instagram" className="text-white/60 hover:text-accent transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.94.33 4.2.63c-.74.29-1.37.68-2 1.31-.63.63-1.02 1.26-1.31 2-.3.74-.5 1.58-.56 2.85C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.11.56 2.85.29.74.68 1.37 1.31 2 .63.63 1.26 1.02 2 1.31.74.3 1.58.5 2.85.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.11-.26 2.85-.56a5.4 5.4 0 0 0 2-1.31 5.4 5.4 0 0 0 1.31-2c.3-.74.5-1.58.56-2.85.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.11-.56-2.85a5.4 5.4 0 0 0-1.31-2 5.4 5.4 0 0 0-2-1.31c-.74-.3-1.58-.5-2.85-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+              <a
+                href={site.social.instagram}
+                aria-label="Instagram"
+                className="text-white/60 hover:text-accent transition-colors"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.94.33 4.2.63c-.74.29-1.37.68-2 1.31-.63.63-1.02 1.26-1.31 2-.3.74-.5 1.58-.56 2.85C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.11.56 2.85.29.74.68 1.37 1.31 2 .63.63 1.26 1.02 2 1.31.74.3 1.58.5 2.85.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.11-.26 2.85-.56a5.4 5.4 0 0 0 2-1.31 5.4 5.4 0 0 0 1.31-2c.3-.74.5-1.58.56-2.85.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.11-.56-2.85a5.4 5.4 0 0 0-1.31-2 5.4 5.4 0 0 0-2-1.31c-.74-.3-1.58-.5-2.85-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
+                </svg>
               </a>
-              <a href={site.social.linkedin} aria-label="LinkedIn" className="text-white/60 hover:text-accent transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.2.79 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              <a
+                href={site.social.linkedin}
+                aria-label="LinkedIn"
+                className="text-white/60 hover:text-accent transition-colors"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.2.79 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                </svg>
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-4">Quick Links</h4>
+            <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-4">
+              Quick Links
+            </h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="hover:text-accent transition-colors">About Us</Link></li>
-              <li><Link to="/products" className="hover:text-accent transition-colors">Our Products</Link></li>
-              <li><Link to="/projects" className="hover:text-accent transition-colors">Projects</Link></li>
-              <li><Link to="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
-              <li><Link to="/testimonials" className="hover:text-accent transition-colors">Testimonials</Link></li>
-              <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-accent transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/products" className="hover:text-accent transition-colors">
+                  Our Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/projects" className="hover:text-accent transition-colors">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="hover:text-accent transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/testimonials" className="hover:text-accent transition-colors">
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-accent transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-4">Products</h4>
+            <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-4">
+              Products
+            </h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/products" className="hover:text-accent transition-colors">Blinds</Link></li>
-              <li><Link to="/products" className="hover:text-accent transition-colors">Curtains</Link></li>
-              <li><a href="/products/shutters" className="hover:text-accent transition-colors">Shutters</a></li>
-              <li><a href="/products/awnings" className="hover:text-accent transition-colors">Awnings</a></li>
-              <li><a href="/products/custom-solutions" className="hover:text-accent transition-colors">Custom Solutions</a></li>
+              <li>
+                <Link to="/products" className="hover:text-accent transition-colors">
+                  Blinds
+                </Link>
+              </li>
+              <li>
+                <Link to="/products" className="hover:text-accent transition-colors">
+                  Curtains
+                </Link>
+              </li>
+              <li>
+                <a href="/products/shutters" className="hover:text-accent transition-colors">
+                  Shutters
+                </a>
+              </li>
+              <li>
+                <a href="/products/awnings" className="hover:text-accent transition-colors">
+                  Awnings
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products/custom-solutions"
+                  className="hover:text-accent transition-colors"
+                >
+                  Custom Solutions
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-4">Contact Us</h4>
+            <h4 className="text-white text-sm font-semibold uppercase tracking-widest mb-4">
+              Contact Us
+            </h4>
             <ul className="space-y-2 text-sm">
               <li className="text-white/60">Call Us</li>
-              <li><a href={site.phoneHref} className="text-accent font-medium hover:underline">{site.phone}</a></li>
+              <li>
+                <a href={site.phoneHref} className="text-accent font-medium hover:underline">
+                  {site.phone}
+                </a>
+              </li>
               <li className="text-white/60 mt-2">Email</li>
-              <li><a href={`mailto:${site.email}`} className="text-accent font-medium hover:underline">{site.email}</a></li>
+              <li>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="text-accent font-medium hover:underline"
+                >
+                  {site.email}
+                </a>
+              </li>
               <li className="text-white/60 mt-2">Showroom</li>
               <li className="text-white/60">{site.address.line1}</li>
               <li className="text-white/60">{site.address.line2}</li>
@@ -341,8 +421,12 @@ function Footer() {
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/50">© 2026 Tip Top Blinds. All rights reserved.</p>
           <div className="flex gap-6 text-xs text-white/50">
-            <Link to="/privacy" className="hover:text-accent">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-accent">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-accent">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="hover:text-accent">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
@@ -361,7 +445,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Custom-made blinds, curtains, shutters and awnings from Tip Top Blinds. Melbourne manufacturer with 70+ years experience. Free measure & quote, factory-direct prices.",
       },
-      { property: "og:title", content: "Tip Top Blinds — Custom Blinds, Curtains & Awnings Melbourne" },
+      {
+        property: "og:title",
+        content: "Tip Top Blinds — Custom Blinds, Curtains & Awnings Melbourne",
+      },
       {
         property: "og:description",
         content:

@@ -15,10 +15,26 @@ export const Route = createFileRoute("/service-areas")({
 
 function ServiceAreasPage() {
   const suburbs = [
-    "Clayton", "Glen Iris", "Malvern", "South Yarra", "Toorak",
-    "Camberwell", "Kew", "Balwyn", "Doncaster", "Box Hill",
-    "Ringwood", "Croydon", "Nunawading", "Waverley", "Chadstone",
-    "Oakleigh", "Murrumbeena", "Carnegie", "Murrumbeena", "Bentleigh",
+    "Clayton",
+    "Glen Iris",
+    "Malvern",
+    "South Yarra",
+    "Toorak",
+    "Camberwell",
+    "Kew",
+    "Balwyn",
+    "Doncaster",
+    "Box Hill",
+    "Ringwood",
+    "Croydon",
+    "Nunawading",
+    "Waverley",
+    "Chadstone",
+    "Oakleigh",
+    "Murrumbeena",
+    "Carnegie",
+    "Murrumbeena",
+    "Bentleigh",
   ];
   return (
     <div className="py-20 md:py-28 bg-background">
@@ -28,8 +44,8 @@ function ServiceAreasPage() {
           Melbourne <em className="text-accent not-italic">Wide</em>
         </h1>
         <p className="text-muted-foreground leading-relaxed mb-8">
-          Free in-home measure and quote across every Melbourne suburb — no
-          obligation, no high-pressure sales.
+          Free in-home measure and quote across every Melbourne suburb — no obligation, no
+          high-pressure sales.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {suburbs.map((s) => (

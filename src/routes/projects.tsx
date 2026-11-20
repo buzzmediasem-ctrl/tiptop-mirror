@@ -6,7 +6,8 @@ export const Route = createFileRoute("/projects")({
       { title: "Projects — Tip Top Blinds" },
       {
         name: "description",
-        content: "Residential and commercial window furnishing projects by Tip Top Blinds across Melbourne.",
+        content:
+          "Residential and commercial window furnishing projects by Tip Top Blinds across Melbourne.",
       },
     ],
   }),
@@ -32,13 +33,8 @@ function ProjectsPage() {
               desc: "Window furnishings for offices, restaurants, retail and hospitality across Victoria.",
             },
           ].map((p) => (
-            <div
-              key={p.title}
-              className="bg-card border border-border rounded-lg p-8 shadow-soft"
-            >
-              <h2 className="font-serif text-2xl font-medium text-foreground mb-3">
-                {p.title}
-              </h2>
+            <div key={p.title} className="bg-card border border-border rounded-lg p-8 shadow-soft">
+              <h2 className="font-serif text-2xl font-medium text-foreground mb-3">{p.title}</h2>
               <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
             </div>
           ))}

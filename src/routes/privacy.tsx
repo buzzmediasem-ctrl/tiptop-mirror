@@ -19,9 +19,9 @@ function PrivacyPage() {
       <div className="container mx-auto px-6 lg:px-8 max-w-3xl prose prose-lg">
         <h1 className="heading-section text-foreground mb-6">Privacy Policy</h1>
         <p className="text-muted-foreground leading-relaxed">
-          Tip Top Blinds respects your privacy. We only collect information
-          necessary to provide our measure, quote and installation services. We
-          do not sell or share your personal information with third parties.
+          Tip Top Blinds respects your privacy. We only collect information necessary to provide our
+          measure, quote and installation services. We do not sell or share your personal
+          information with third parties.
         </p>
       </div>
     </div>

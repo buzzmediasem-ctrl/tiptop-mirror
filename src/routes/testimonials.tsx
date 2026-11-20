@@ -24,18 +24,13 @@ function TestimonialsPage() {
         </h1>
         <div className="grid md:grid-cols-2 gap-6">
           {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="bg-card border border-border rounded-lg p-6 shadow-soft"
-            >
+            <div key={t.name} className="bg-card border border-border rounded-lg p-6 shadow-soft">
               <div className="flex gap-1 text-accent mb-4">
                 {"★★★★★".split("").map((s, i) => (
                   <span key={i}>{s}</span>
                 ))}
               </div>
-              <p className="text-foreground leading-relaxed mb-6 text-lg">
-                "{t.quote}"
-              </p>
+              <p className="text-foreground leading-relaxed mb-6 text-lg">"{t.quote}"</p>
               <div className="text-sm">
                 <div className="font-medium text-foreground">{t.name}</div>
                 <div className="text-muted-foreground">

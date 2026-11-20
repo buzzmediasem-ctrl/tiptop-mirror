@@ -161,11 +161,7 @@ function CollectionsSection() {
   );
 }
 
-function CollectionCard({
-  collection,
-}: {
-  collection: (typeof collections)[number];
-}) {
+function CollectionCard({ collection }: { collection: (typeof collections)[number] }) {
   return (
     <a
       href={`/products/${collection.slug}`}
@@ -202,9 +198,7 @@ function VideoSection() {
     <section className="py-20 md:py-28 bg-charcoal text-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="mb-12 md:mb-16 text-center">
-          <span className="label-uppercase mb-4 block text-white/50">
-            As Seen On The Block
-          </span>
+          <span className="label-uppercase mb-4 block text-white/50">As Seen On The Block</span>
           <h2 className="heading-section text-white">
             See Our Blinds in <em className="text-accent not-italic">Action</em>
           </h2>
@@ -222,9 +216,7 @@ function VideoSection() {
               </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-charcoal to-transparent">
-              <p className="text-white text-sm font-medium">
-                Explore Tip Top Blinds Showroom
-              </p>
+              <p className="text-white text-sm font-medium">Explore Tip Top Blinds Showroom</p>
               <p className="text-white/60 text-xs mt-1">
                 tiptop blinds Melbourne · 153 subscribers
               </p>
@@ -254,9 +246,8 @@ function ShowroomSection() {
               Consult the Design <em className="text-accent not-italic">Experts</em>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Our Designer Showroom — Clayton, VIC. Experience our full range in
-              person, explore the latest trends, touch premium fabrics, and get
-              expert advice.
+              Our Designer Showroom — Clayton, VIC. Experience our full range in person, explore the
+              latest trends, touch premium fabrics, and get expert advice.
             </p>
             <div className="space-y-4">
               <div className="border-l-2 border-accent pl-4">
@@ -264,8 +255,8 @@ function ShowroomSection() {
                   Visit Our Showroom
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Experience our full range in person. Explore the latest trends,
-                  touch premium fabrics, and get expert advice.
+                  Experience our full range in person. Explore the latest trends, touch premium
+                  fabrics, and get expert advice.
                 </p>
                 <Link
                   to="/showroom"
@@ -276,12 +267,10 @@ function ShowroomSection() {
                 </Link>
               </div>
               <div className="border-l-2 border-border pl-4">
-                <h3 className="font-serif text-lg font-medium text-foreground">
-                  We Come to You
-                </h3>
+                <h3 className="font-serif text-lg font-medium text-foreground">We Come to You</h3>
                 <p className="text-sm text-muted-foreground">
-                  Our designers visit your home with fabric samples and provide a
-                  complimentary measure & quote.
+                  Our designers visit your home with fabric samples and provide a complimentary
+                  measure & quote.
                 </p>
                 <Link
                   to="/contact"
@@ -292,12 +281,10 @@ function ShowroomSection() {
                 </Link>
               </div>
               <div className="border-l-2 border-border pl-4">
-                <h3 className="font-serif text-lg font-medium text-foreground">
-                  Quote from Plans
-                </h3>
+                <h3 className="font-serif text-lg font-medium text-foreground">Quote from Plans</h3>
                 <p className="text-sm text-muted-foreground">
-                  Building or renovating? Send us your plans and our team will
-                  prepare a detailed quote.
+                  Building or renovating? Send us your plans and our team will prepare a detailed
+                  quote.
                 </p>
                 <Link
                   to="/contact"
@@ -348,17 +335,12 @@ function TestimonialSection() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="bg-card border border-border rounded-lg p-6 shadow-soft"
-            >
+            <div key={t.name} className="bg-card border border-border rounded-lg p-6 shadow-soft">
               <Quote className="w-8 h-8 text-accent/40 mb-4" />
               <p className="text-foreground leading-relaxed mb-6">"{t.quote}"</p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center">
-                  <span className="font-serif text-accent font-medium">
-                    {t.name[0]}
-                  </span>
+                  <span className="font-serif text-accent font-medium">{t.name[0]}</span>
                 </div>
                 <div>
                   <div className="font-medium text-foreground text-sm">{t.name}</div>
@@ -392,11 +374,11 @@ function BlogSection() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {blogPosts.map((post) => (
-          <a
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            className="group block overflow-hidden rounded-lg bg-card border border-border shadow-soft hover:shadow-large transition-shadow"
-          >
+            <a
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group block overflow-hidden rounded-lg bg-card border border-border shadow-soft hover:shadow-large transition-shadow"
+            >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
                   src={post.image}
@@ -416,9 +398,7 @@ function BlogSection() {
                 <h3 className="font-serif text-lg font-medium text-foreground group-hover:text-accent transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                  {post.excerpt}
-                </p>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{post.excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-sm text-accent font-medium mt-4 group-hover:gap-2 transition-all">
                   Read More <ArrowRight className="w-4 h-4" />
                 </span>
@@ -448,43 +428,38 @@ function CustomBlindsSection() {
         <div className="mb-12 text-center">
           <span className="label-uppercase mb-4 block">Custom Blinds Melbourne</span>
           <h2 className="heading-section text-foreground">
-            Custom blinds in Melbourne — what they cost, how long they take, and
-            whether they're <em className="text-accent not-italic">worth it</em>
+            Custom blinds in Melbourne — what they cost, how long they take, and whether they're{" "}
+            <em className="text-accent not-italic">worth it</em>
           </h2>
         </div>
 
         <div className="prose prose-lg max-w-none mb-10">
           <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Quick Answer:</strong> Custom
-            blinds in Melbourne typically cost $150–$600 per window installed,
-            depending on style (roller, roman, venetian, blockout) and
-            motorisation. Tip Top Blinds manufactures every blind to the
-            millimetre in our Clayton factory, measures and fits in-house, and
-            delivers in 2–3 weeks — backed by a 5-year warranty and 65+ years in
-            business.
+            <strong className="text-foreground">Quick Answer:</strong> Custom blinds in Melbourne
+            typically cost $150–$600 per window installed, depending on style (roller, roman,
+            venetian, blockout) and motorisation. Tip Top Blinds manufactures every blind to the
+            millimetre in our Clayton factory, measures and fits in-house, and delivers in 2–3 weeks
+            — backed by a 5-year warranty and 65+ years in business.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-10">
           <div>
-            <h3 className="font-serif text-xl font-medium text-foreground mb-4">
-              Key Takeaways
-            </h3>
+            <h3 className="font-serif text-xl font-medium text-foreground mb-4">Key Takeaways</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex gap-2">
                 <span className="text-accent">•</span>
-                Average price per window: $150–$280 (basic roller), $250–$450
-                (blockout/sunscreen), $400–$900 (custom roman or motorised)
+                Average price per window: $150–$280 (basic roller), $250–$450 (blockout/sunscreen),
+                $400–$900 (custom roman or motorised)
               </li>
               <li className="flex gap-2">
                 <span className="text-accent">•</span>
-                Whole-home pricing: a 4-bedroom Melbourne home typically lands
-                between $2,400 and $6,000 fully measured and installed
+                Whole-home pricing: a 4-bedroom Melbourne home typically lands between $2,400 and
+                $6,000 fully measured and installed
               </li>
               <li className="flex gap-2">
                 <span className="text-accent">•</span>
-                Lead time: 2–3 weeks standard, 7–10 working days for
-                property-settlement rush jobs
+                Lead time: 2–3 weeks standard, 7–10 working days for property-settlement rush jobs
               </li>
               <li className="flex gap-2">
                 <span className="text-accent">•</span>
@@ -500,12 +475,8 @@ function CustomBlindsSection() {
               <table className="w-full text-sm border border-border rounded-lg">
                 <thead>
                   <tr className="bg-secondary">
-                    <th className="text-left p-3 font-medium text-foreground">
-                      Feature
-                    </th>
-                    <th className="text-left p-3 font-medium text-accent">
-                      Tip Top Blinds
-                    </th>
+                    <th className="text-left p-3 font-medium text-foreground">Feature</th>
+                    <th className="text-left p-3 font-medium text-accent">Tip Top Blinds</th>
                     <th className="text-left p-3 font-medium text-muted-foreground">
                       Typical Supplier
                     </th>
@@ -526,9 +497,7 @@ function CustomBlindsSection() {
         </div>
 
         <div className="space-y-2">
-          <h3 className="font-serif text-xl font-medium text-foreground mb-4">
-            Common Questions
-          </h3>
+          <h3 className="font-serif text-xl font-medium text-foreground mb-4">Common Questions</h3>
           {customBlindsFaqs.map((faq) => (
             <div key={faq.q} className="border border-border rounded-lg overflow-hidden">
               <button
@@ -559,16 +528,14 @@ function CtaSection() {
   return (
     <section className="py-20 md:py-28 bg-charcoal text-white">
       <div className="container mx-auto px-6 lg:px-8 text-center">
-        <span className="label-uppercase mb-4 block text-white/50">
-          Get Started Today
-        </span>
+        <span className="label-uppercase mb-4 block text-white/50">Get Started Today</span>
         <h2 className="heading-section text-white mb-6">
           Ready to Transform <em className="text-accent not-italic">Your Home?</em>
         </h2>
         <p className="text-white/70 max-w-2xl mx-auto mb-8 leading-relaxed">
-          Book your complimentary in-home consultation. Our expert consultants
-          will measure your windows, discuss your requirements, and provide a
-          no-obligation quote tailored to your needs.
+          Book your complimentary in-home consultation. Our expert consultants will measure your
+          windows, discuss your requirements, and provide a no-obligation quote tailored to your
+          needs.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link

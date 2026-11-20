@@ -13,8 +13,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Us — Tip Top Blinds" },
       {
         property: "og:description",
-        content:
-          "70+ years of crafting premium blinds, curtains and awnings in Melbourne.",
+        content: "70+ years of crafting premium blinds, curtains and awnings in Melbourne.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -31,9 +30,9 @@ function AboutPage() {
           The Tip Top <em className="text-accent not-italic">Difference</em>
         </h1>
         <p className="text-muted-foreground leading-relaxed text-lg mb-6">
-          For over 70 years, we've been transforming Australian homes with
-          beautifully crafted window furnishings. Our commitment to quality,
-          service, and attention to detail sets us apart.
+          For over 70 years, we've been transforming Australian homes with beautifully crafted
+          window furnishings. Our commitment to quality, service, and attention to detail sets us
+          apart.
         </p>
         <ul className="space-y-3 text-muted-foreground mb-10">
           {[
@@ -58,9 +57,7 @@ function AboutPage() {
             { v: "5★", l: "Average Rating" },
           ].map((s) => (
             <div key={s.l}>
-              <div className="font-serif text-3xl md:text-4xl font-medium text-accent">
-                {s.v}
-              </div>
+              <div className="font-serif text-3xl md:text-4xl font-medium text-accent">{s.v}</div>
               <div className="text-xs text-muted-foreground uppercase tracking-widest mt-2">
                 {s.l}
               </div>

@@ -48,11 +48,21 @@ export const collections: Collection[] = [
   { slug: "indoor", title: "Indoor", subtitle: "Interior solutions", image: images.indoor },
   { slug: "roller-blinds", title: "Rollers", subtitle: "Sleek & versatile", image: images.rollers },
   { slug: "outdoor", title: "Outdoor", subtitle: "Weather protection", image: images.outdoor },
-  { slug: "sheer-curtains", title: "Curtains", subtitle: "Timeless luxury", image: images.curtains },
+  {
+    slug: "sheer-curtains",
+    title: "Curtains",
+    subtitle: "Timeless luxury",
+    image: images.curtains,
+  },
   { slug: "awnings", title: "Awnings", subtitle: "Alfresco living", image: images.awnings },
   { slug: "shutters", title: "Shutters", subtitle: "Enduring elegance", image: images.shutters },
   { slug: "roof-systems", title: "Roof Systems", subtitle: "Overhead shade", image: images.roof },
-  { slug: "motorisation", title: "Motorisation", subtitle: "Smart control", image: images.motorisation },
+  {
+    slug: "motorisation",
+    title: "Motorisation",
+    subtitle: "Smart control",
+    image: images.motorisation,
+  },
 ];
 
 export const productNav = [
@@ -83,17 +93,20 @@ export const features: Feature[] = [
   {
     icon: "ruler",
     title: "Free Measure & Quote",
-    description: "Expert consultants visit your home to measure and advise on the perfect solution.",
+    description:
+      "Expert consultants visit your home to measure and advise on the perfect solution.",
   },
   {
     icon: "factory",
     title: "Factory Direct Prices",
-    description: "We manufacture blinds, curtains and awnings in our Clayton factory — no middleman, just great value.",
+    description:
+      "We manufacture blinds, curtains and awnings in our Clayton factory — no middleman, just great value.",
   },
   {
     icon: "store",
     title: "Designer Showroom",
-    description: "Visit our showroom to see our full range of curtains, blinds and awnings on display before you buy.",
+    description:
+      "Visit our showroom to see our full range of curtains, blinds and awnings on display before you buy.",
   },
   {
     icon: "shield",
@@ -218,8 +231,16 @@ export const customBlindsFaqs: Faq[] = [
 ];
 
 export const comparisonTable = [
-  { feature: "Fits your exact window", us: "Made to the millimetre", them: "Closest standard size only" },
-  { feature: "Fabric & colour choice", us: "200+ fabrics, 80+ colours", them: "8–15 standard options" },
+  {
+    feature: "Fits your exact window",
+    us: "Made to the millimetre",
+    them: "Closest standard size only",
+  },
+  {
+    feature: "Fabric & colour choice",
+    us: "200+ fabrics, 80+ colours",
+    them: "8–15 standard options",
+  },
   { feature: "Lifespan", us: "10–20 years", them: "3–5 years typical" },
   { feature: "Installation", us: "Included — our team", them: "DIY (your time, your risk)" },
   { feature: "Warranty", us: "5 years parts & labour", them: "1 year, parts only" },

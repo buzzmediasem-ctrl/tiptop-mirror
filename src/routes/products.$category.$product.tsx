@@ -32,28 +32,20 @@ function ProductPage() {
         >
           ← All Products
         </Link>
-        <span className="label-uppercase mb-4 block mt-6">
-          {cat?.subtitle}
-        </span>
+        <span className="label-uppercase mb-4 block mt-6">{cat?.subtitle}</span>
         <h1 className="heading-section text-foreground mb-6">{productName}</h1>
         <p className="text-muted-foreground leading-relaxed max-w-2xl mb-10">
-          {productName} custom-made in our Clayton factory. Free measure &amp;
-          quote, professional installation, 5-year warranty.
+          {productName} custom-made in our Clayton factory. Free measure &amp; quote, professional
+          installation, 5-year warranty.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {cat && (
             <div className="aspect-[4/3] overflow-hidden rounded-lg shadow-soft">
-              <img
-                src={cat.image}
-                alt={productName}
-                className="w-full h-full object-cover"
-              />
+              <img src={cat.image} alt={productName} className="w-full h-full object-cover" />
             </div>
           )}
           <div className="space-y-4">
-            <h2 className="font-serif text-2xl font-medium text-foreground">
-              Features
-            </h2>
+            <h2 className="font-serif text-2xl font-medium text-foreground">Features</h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex gap-2">
                 <span className="text-accent">✦</span> Made to the millimetre

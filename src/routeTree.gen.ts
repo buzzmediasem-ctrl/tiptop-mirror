@@ -21,8 +21,11 @@ import { Route as ServiceAreasRouteImport } from './routes/service-areas'
 import { Route as ShowroomRouteImport } from './routes/showroom'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ProductsIndexRouteImport } from './routes/products.index'
 import { Route as ProductsCategoryRouteImport } from './routes/products.$category'
+import { Route as ProductsCategoryIndexRouteImport } from './routes/products.$category.index'
 import { Route as ProductsCategoryProductRouteImport } from './routes/products.$category.$product'
 
 const IndexRoute = IndexRouteImport.update({
@@ -85,15 +88,30 @@ const TestimonialsRoute = TestimonialsRouteImport.update({
   path: '/testimonials',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const ProductsIndexRoute = ProductsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProductsRoute,
+} as any)
 const ProductsCategoryRoute = ProductsCategoryRouteImport.update({
   id: '/$category',
   path: '/$category',
   getParentRoute: () => ProductsRoute,
+} as any)
+const ProductsCategoryIndexRoute = ProductsCategoryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProductsCategoryRoute,
 } as any)
 const ProductsCategoryProductRoute = ProductsCategoryProductRouteImport.update({
   id: '/$product',
@@ -116,24 +134,27 @@ export interface FileRoutesByFullPath {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/products/$category': typeof ProductsCategoryRouteWithChildren
+  '/blog/': typeof BlogIndexRoute
+  '/products/': typeof ProductsIndexRoute
   '/products/$category/$product': typeof ProductsCategoryProductRoute
+  '/products/$category/': typeof ProductsCategoryIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/privacy': typeof PrivacyRoute
-  '/products': typeof ProductsRouteWithChildren
   '/projects': typeof ProjectsRoute
   '/service-areas': typeof ServiceAreasRoute
   '/showroom': typeof ShowroomRoute
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/products/$category': typeof ProductsCategoryRouteWithChildren
+  '/blog': typeof BlogIndexRoute
+  '/products': typeof ProductsIndexRoute
   '/products/$category/$product': typeof ProductsCategoryProductRoute
+  '/products/$category': typeof ProductsCategoryIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -151,7 +172,10 @@ export interface FileRoutesById {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/products/$category': typeof ProductsCategoryRouteWithChildren
+  '/blog/': typeof BlogIndexRoute
+  '/products/': typeof ProductsIndexRoute
   '/products/$category/$product': typeof ProductsCategoryProductRoute
+  '/products/$category/': typeof ProductsCategoryIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -170,24 +194,27 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/products/$category'
+    | '/blog/'
+    | '/products/'
     | '/products/$category/$product'
+    | '/products/$category/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/gallery'
     | '/privacy'
-    | '/products'
     | '/projects'
     | '/service-areas'
     | '/showroom'
     | '/terms'
     | '/testimonials'
     | '/blog/$slug'
-    | '/products/$category'
+    | '/blog'
+    | '/products'
     | '/products/$category/$product'
+    | '/products/$category'
   id:
     | '__root__'
     | '/'
@@ -204,7 +231,10 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/products/$category'
+    | '/blog/'
+    | '/products/'
     | '/products/$category/$product'
+    | '/products/$category/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -308,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TestimonialsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -315,12 +352,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/products/': {
+      id: '/products/'
+      path: '/'
+      fullPath: '/products/'
+      preLoaderRoute: typeof ProductsIndexRouteImport
+      parentRoute: typeof ProductsRoute
+    }
     '/products/$category': {
       id: '/products/$category'
       path: '/$category'
       fullPath: '/products/$category'
       preLoaderRoute: typeof ProductsCategoryRouteImport
       parentRoute: typeof ProductsRoute
+    }
+    '/products/$category/': {
+      id: '/products/$category/'
+      path: '/'
+      fullPath: '/products/$category/'
+      preLoaderRoute: typeof ProductsCategoryIndexRouteImport
+      parentRoute: typeof ProductsCategoryRoute
     }
     '/products/$category/$product': {
       id: '/products/$category/$product'
@@ -334,20 +385,24 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface ProductsCategoryRouteChildren {
   ProductsCategoryProductRoute: typeof ProductsCategoryProductRoute
+  ProductsCategoryIndexRoute: typeof ProductsCategoryIndexRoute
 }
 
 const ProductsCategoryRouteChildren: ProductsCategoryRouteChildren = {
   ProductsCategoryProductRoute: ProductsCategoryProductRoute,
+  ProductsCategoryIndexRoute: ProductsCategoryIndexRoute,
 }
 
 const ProductsCategoryRouteWithChildren =
@@ -355,10 +410,12 @@ const ProductsCategoryRouteWithChildren =
 
 interface ProductsRouteChildren {
   ProductsCategoryRoute: typeof ProductsCategoryRouteWithChildren
+  ProductsIndexRoute: typeof ProductsIndexRoute
 }
 
 const ProductsRouteChildren: ProductsRouteChildren = {
   ProductsCategoryRoute: ProductsCategoryRouteWithChildren,
+  ProductsIndexRoute: ProductsIndexRoute,
 }
 
 const ProductsRouteWithChildren = ProductsRoute._addFileChildren(

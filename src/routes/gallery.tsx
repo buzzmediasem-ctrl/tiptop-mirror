@@ -6,7 +6,8 @@ export const Route = createFileRoute("/gallery")({
       { title: "Gallery — Tip Top Blinds" },
       {
         name: "description",
-        content: "Browse our gallery of completed blinds, curtains and awnings projects across Melbourne.",
+        content:
+          "Browse our gallery of completed blinds, curtains and awnings projects across Melbourne.",
       },
     ],
   }),
@@ -22,8 +23,8 @@ function GalleryPage() {
           Our <em className="text-accent not-italic">Work</em>
         </h1>
         <p className="text-muted-foreground leading-relaxed max-w-2xl mb-10">
-          A selection of completed window furnishing projects across Melbourne
-          homes and commercial spaces.
+          A selection of completed window furnishing projects across Melbourne homes and commercial
+          spaces.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {[
@@ -37,10 +38,7 @@ function GalleryPage() {
             "motorisation",
             "showroom",
           ].map((key) => (
-            <div
-              key={key}
-              className="aspect-square overflow-hidden rounded-lg shadow-soft"
-            >
+            <div key={key} className="aspect-square overflow-hidden rounded-lg shadow-soft">
               <img
                 src={`https://vibe.filesafe.space/1795144699334834390/assets/${key}.webp`}
                 alt={key}
