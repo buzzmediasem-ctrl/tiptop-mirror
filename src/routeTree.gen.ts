@@ -10,33 +10,216 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ServiceAreasRouteImport } from './routes/service-areas'
+import { Route as ShowroomRouteImport } from './routes/showroom'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ProductsCategoryRouteImport } from './routes/products.$category'
+import { Route as ProductsCategoryProductRouteImport } from './routes/products.$category.$product'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiceAreasRoute = ServiceAreasRouteImport.update({
+  id: '/service-areas',
+  path: '/service-areas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShowroomRoute = ShowroomRouteImport.update({
+  id: '/showroom',
+  path: '/showroom',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TestimonialsRoute = TestimonialsRouteImport.update({
+  id: '/testimonials',
+  path: '/testimonials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
+const ProductsCategoryRoute = ProductsCategoryRouteImport.update({
+  id: '/$category',
+  path: '/$category',
+  getParentRoute: () => ProductsRoute,
+} as any)
+const ProductsCategoryProductRoute = ProductsCategoryProductRouteImport.update({
+  id: '/$product',
+  path: '/$product',
+  getParentRoute: () => ProductsCategoryRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/privacy': typeof PrivacyRoute
+  '/products': typeof ProductsRouteWithChildren
+  '/projects': typeof ProjectsRoute
+  '/service-areas': typeof ServiceAreasRoute
+  '/showroom': typeof ShowroomRoute
+  '/terms': typeof TermsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/products/$category': typeof ProductsCategoryRouteWithChildren
+  '/products/$category/$product': typeof ProductsCategoryProductRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/privacy': typeof PrivacyRoute
+  '/products': typeof ProductsRouteWithChildren
+  '/projects': typeof ProjectsRoute
+  '/service-areas': typeof ServiceAreasRoute
+  '/showroom': typeof ShowroomRoute
+  '/terms': typeof TermsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/products/$category': typeof ProductsCategoryRouteWithChildren
+  '/products/$category/$product': typeof ProductsCategoryProductRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/privacy': typeof PrivacyRoute
+  '/products': typeof ProductsRouteWithChildren
+  '/projects': typeof ProjectsRoute
+  '/service-areas': typeof ServiceAreasRoute
+  '/showroom': typeof ShowroomRoute
+  '/terms': typeof TermsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/products/$category': typeof ProductsCategoryRouteWithChildren
+  '/products/$category/$product': typeof ProductsCategoryProductRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/gallery'
+    | '/privacy'
+    | '/products'
+    | '/projects'
+    | '/service-areas'
+    | '/showroom'
+    | '/terms'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/products/$category'
+    | '/products/$category/$product'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/gallery'
+    | '/privacy'
+    | '/products'
+    | '/projects'
+    | '/service-areas'
+    | '/showroom'
+    | '/terms'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/products/$category'
+    | '/products/$category/$product'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/gallery'
+    | '/privacy'
+    | '/products'
+    | '/projects'
+    | '/service-areas'
+    | '/showroom'
+    | '/terms'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/products/$category'
+    | '/products/$category/$product'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRouteWithChildren
+  ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ProductsRoute: typeof ProductsRouteWithChildren
+  ProjectsRoute: typeof ProjectsRoute
+  ServiceAreasRoute: typeof ServiceAreasRoute
+  ShowroomRoute: typeof ShowroomRoute
+  TermsRoute: typeof TermsRoute
+  TestimonialsRoute: typeof TestimonialsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +231,153 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service-areas': {
+      id: '/service-areas'
+      path: '/service-areas'
+      fullPath: '/service-areas'
+      preLoaderRoute: typeof ServiceAreasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/showroom': {
+      id: '/showroom'
+      path: '/showroom'
+      fullPath: '/showroom'
+      preLoaderRoute: typeof ShowroomRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/testimonials': {
+      id: '/testimonials'
+      path: '/testimonials'
+      fullPath: '/testimonials'
+      preLoaderRoute: typeof TestimonialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/products/$category': {
+      id: '/products/$category'
+      path: '/$category'
+      fullPath: '/products/$category'
+      preLoaderRoute: typeof ProductsCategoryRouteImport
+      parentRoute: typeof ProductsRoute
+    }
+    '/products/$category/$product': {
+      id: '/products/$category/$product'
+      path: '/$product'
+      fullPath: '/products/$category/$product'
+      preLoaderRoute: typeof ProductsCategoryProductRouteImport
+      parentRoute: typeof ProductsCategoryRoute
+    }
   }
 }
 
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface ProductsCategoryRouteChildren {
+  ProductsCategoryProductRoute: typeof ProductsCategoryProductRoute
+}
+
+const ProductsCategoryRouteChildren: ProductsCategoryRouteChildren = {
+  ProductsCategoryProductRoute: ProductsCategoryProductRoute,
+}
+
+const ProductsCategoryRouteWithChildren =
+  ProductsCategoryRoute._addFileChildren(ProductsCategoryRouteChildren)
+
+interface ProductsRouteChildren {
+  ProductsCategoryRoute: typeof ProductsCategoryRouteWithChildren
+}
+
+const ProductsRouteChildren: ProductsRouteChildren = {
+  ProductsCategoryRoute: ProductsCategoryRouteWithChildren,
+}
+
+const ProductsRouteWithChildren = ProductsRoute._addFileChildren(
+  ProductsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BlogRoute: BlogRouteWithChildren,
+  ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
+  PrivacyRoute: PrivacyRoute,
+  ProductsRoute: ProductsRouteWithChildren,
+  ProjectsRoute: ProjectsRoute,
+  ServiceAreasRoute: ServiceAreasRoute,
+  ShowroomRoute: ShowroomRoute,
+  TermsRoute: TermsRoute,
+  TestimonialsRoute: TestimonialsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
