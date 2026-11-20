@@ -8,7 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Calendar } from "lucide-react";
 
 import appCss from "../styles.css?url";
 import { reportVibeError } from "../lib/vibe-error-reporting";
@@ -470,7 +470,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap",
       },
     ],
   }),
@@ -494,6 +494,27 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function FloatingActions() {
+  return (
+    <div className="fixed left-4 bottom-24 z-40 flex flex-col gap-2">
+      <Link
+        to="/showroom"
+        className="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-charcoal text-white text-xs font-medium shadow-large hover:opacity-90 transition-opacity"
+      >
+        <Calendar className="w-4 h-4 text-accent" /> Book Showroom Visit
+      </Link>
+      <a
+        href={site.callbackUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-charcoal text-white text-xs font-medium shadow-large hover:opacity-90 transition-opacity"
+      >
+        <Phone className="w-4 h-4 text-accent" /> Request Call Back
+      </a>
+    </div>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
@@ -506,6 +527,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <FloatingActions />
       </div>
     </QueryClientProvider>
   );
